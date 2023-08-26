@@ -48,8 +48,6 @@ ol {
   align-items: flex-end;
   gap: 30px;
   inline-size: 1140px;
-  padding-inline: 30px;
-  padding-block: 133px;
 }
 
 .search-form {
