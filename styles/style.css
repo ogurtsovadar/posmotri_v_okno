@@ -19,8 +19,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: 133px;
-  padding-inline: 30px;
 }
 
 h1,
@@ -49,7 +47,9 @@ ol {
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
-  max-inline-size: 1140px;
+  inline-size: 1140px;
+  padding-inline: 30px;
+  padding-block: 133px;
 }
 
 .search-form {
@@ -59,8 +59,7 @@ ol {
 }
 
 .content__list {
-  max-block-size: 298px;
-  min-block-size: 298px;
+  block-size: 298px;
   overflow: auto;
   position: relative;
 }
@@ -76,8 +75,8 @@ ol {
 /*Уточнение размеров*/
 
 .result__video-container {
-  min-inline-size: 711px;
-  min-block-size: 386px;
+  inline-size: 711px;
+  block-size: 386px;
   margin-block-end: 16px;
   position: relative;
 }
@@ -101,8 +100,8 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  max-block-size: 103px;
-  max-inline-size: 194px;
+  block-size: 103px;
+  inline-size: 194px;
   object-fit: cover;
 }
 
@@ -195,8 +194,8 @@ ol {
 
 .search-form__textfield {
   display: flex;
-  inline-size: 225px;
-  block-size: 27px;
+  min-inline-size: 225px;
+  min-block-size: 27px;
   align-items: center;
   gap: 10px;
   background-color: inherit;
@@ -246,14 +245,14 @@ ol {
 }
 
 .search-form__submit-button {
-  inline-size: 194px;
-  block-size: 34px;
+  min-inline-size: 194px;
+  min-block-size: 34px;
   margin-block-start: 20px;
 }
 
 .more-button {
-  inline-size: 399px;
-  block-size: 34px;
+  min-inline-size: 399px;
+  min-block-size: 34px;
 }
 
 /* Состояние элементов формы и кнопок */
@@ -265,6 +264,11 @@ ol {
 .search-form__label:has(.search-form__textfield:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
+}
+
+.search-form__textfield:active {
+  border-block-start: none;
+  border-block-end: none;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
