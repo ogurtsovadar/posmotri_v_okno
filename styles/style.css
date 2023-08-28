@@ -267,6 +267,14 @@ ol {
 .search-form__textfield:active {
   border-block-start: none;
   border-block-end: none;
+  text-decoration: none;
+}
+
+.search-form__pseudo-checkbox:active::before {
+  content: '';
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
@@ -303,6 +311,7 @@ ol {
 
 .search-form__submit-button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .more-button:focus {
